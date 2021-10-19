@@ -15671,7 +15671,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "The payload accepts name and pricelist field",
+                    "description": "Any editable cart fields can be passed into the request body to be used on the cart.",
                     "content": {
                         "application/json": {
                             "schema": {
