@@ -34083,7 +34083,7 @@
                     "Quote"
                 ],
                 "summary": "Generate Document",
-                "description": "This API is responsible to generate the documenat based on the template and SObject type",
+                "description": "This API is responsible to generate the document based on the template and SObject type",
                 "operationId": "generateDocument",
                 "parameters": [
                     {
@@ -34591,7 +34591,7 @@
                 ],
                 "summary": "Amend Asset",
                 "operationId": "amendAsset",
-                "description": "Invoke this API for change configuartion of assets.",
+                "description": "Invoke this API for change configuration of assets.",
                 "parameters": [
                     {
                         "name": "cartId",
