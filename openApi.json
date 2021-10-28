@@ -34083,7 +34083,7 @@
                     "Quote"
                 ],
                 "summary": "Generate Document",
-                "description": "This API is responsible to generate the document based on the template and SObject type",
+                "description": "This API is responsible to generate the document based on the template and SObject type.",
                 "operationId": "generateDocument",
                 "parameters": [
                     {
