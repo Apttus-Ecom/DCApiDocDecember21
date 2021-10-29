@@ -34195,17 +34195,6 @@
                         }
                     },
                     {
-                        "name": "x-storefront",
-                        "in": "header",
-                        "description": "The name of the storefront being used for the request.",
-                        "required": true,
-                        "style": "simple",
-                        "schema": {
-                            "type": "string",
-                            "example": "ECommerce"
-                        }
-                    },
-                    {
                         "name": "Content-Type",
                         "in": "header",
                         "description": "Content type of the request body.",
