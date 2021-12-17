@@ -35891,12 +35891,12 @@
                 ],
                 "summary": "Resume Asset",
                 "operationId": "ResumeAsset",
-                "description": "Invoke this api to resume suspended assets.",
+                "description": "Invoke this API to resume suspended assets.",
                 "parameters": [
                     {
                         "name": "cartId",
                         "in": "path",
-                        "description": "The reference to the cart Id for the current active cart",
+                        "description": "The reference to the cart Id for the current active cart.",
                         "required": true,
                         "style": "simple",
                         "explode": false,
@@ -35919,7 +35919,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -35941,7 +35941,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "The assetIds is required, rest are optional in the request payload.",
+                    "description": "The assetIds are required, rest are optional in the request payload.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -36221,12 +36221,12 @@
                 ],
                 "summary": "Suspend Asset",
                 "operationId": "SuspendAsset",
-                "description": "Invoke this api for suspending active assets.",
+                "description": "Invoke this API for suspending active assets.",
                 "parameters": [
                     {
                         "name": "cartId",
                         "in": "path",
-                        "description": "The reference to the cart Id for the current active cart",
+                        "description": "The reference to the cart Id for the current active cart.",
                         "required": true,
                         "style": "simple",
                         "explode": false,
@@ -36249,7 +36249,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -36271,7 +36271,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "The startDate & assetIds are required, rest are optional in the request payload.",
+                    "description": "The start date and assetIds are required, rest are optional in the request payload.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -36563,7 +36563,7 @@
                 ],
                 "summary": "Create Collaboration Request",
                 "operationId": "createcollaborationrequests",
-                "description": "Create Collaboration Request",
+                "description": "Create Collaboration Request.",
                 "parameters": [
                     {
                         "name": "Authorization",
@@ -36579,7 +36579,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -36601,7 +36601,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "The request body to create new collaboration request",
+                    "description": "The request body to create new collaboration request.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -36664,7 +36664,7 @@
                 ],
                 "summary": "Update Collaboration Request",
                 "operationId": "updatecollaborationrequests",
-                "description": "Update Collaboration Request",
+                "description": "Update Collaboration Request.",
                 "parameters": [
                     {
                         "name": "recordId",
@@ -36692,7 +36692,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -36714,7 +36714,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "The request body to update the collaboartion request",
+                    "description": "The request body to update the collaboration request.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -36786,7 +36786,7 @@
                 ],
                 "summary": "Delete Collaboration Request",
                 "operationId": "deletecollaborationrequests",
-                "description": "Delete Collaboration Request",
+                "description": "Delete Collaboration Request.",
                 "parameters": [
                     {
                         "name": "recordId",
@@ -36814,7 +36814,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -36866,7 +36866,7 @@
                 ],
                 "summary": "Create cart from Collaboration Request",
                 "operationId": "cartfromcollaborationrequests",
-                "description": "Create cart from Collaboration Request",
+                "description": "Create cart from Collaboration Request.",
                 "parameters": [
                     {
                         "name": "recordId",
@@ -36883,7 +36883,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "schema": {
