@@ -19160,7 +19160,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "Allows bulk Lineitem update for all the fields of lineItem for given cart. ",
+                    "description": "Allows bulk lineitem update for all the fields of lineItem for a given cart. Product Attributes cannot be updated with this API.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -19169,17 +19169,16 @@
                                     "type": "object"
                                 },
                                 "properties": {
-                                    "Id" : {
+                                    "Id": {
                                         "type": "string"
                                     }
                                 },
                                 "example": [
                                     {
-                                     
-                                      "Id": "a1301000000bwVaAAI",
-                                      "Apttus_Config2__Quantity__c": 2
+                                        "Id": "a1301000000bwVaAAI",
+                                        "Apttus_Config2__Quantity__c": 2
                                     }
-                                  ]
+                                ]
                             }
                         }
                     }
@@ -23381,7 +23380,7 @@
                     "Cart Items"
                 ],
                 "summary": "Update Cart Item",
-                "description": "The cart items put endpoint can be used to update existing line items in a cart.\nA successful put will return the rules and line items associated with the updated product.",
+                "description": "The cart items put endpoint can be used to update existing line items in a cart.\nA successful put returns the rules and line items associated with the updated product.",
                 "operationId": "UpdateCartItem",
                 "parameters": [
                     {
@@ -23411,7 +23410,7 @@
                     {
                         "name": "alias",
                         "in": "query",
-                        "description": "The namespace for the fields will be prefixed if set to false. By default it is true.",
+                        "description": "The namespace for the fields are prefixed if set to False. By default it is True.",
                         "required": false,
                         "style": "form",
                         "explode": true,
@@ -23423,7 +23422,7 @@
                     {
                         "name": "cartId",
                         "in": "path",
-                        "description": "The reference to the cart or 'active' for the current active cart",
+                        "description": "The reference to the cart or 'active' for the current active cart.",
                         "required": true,
                         "style": "simple",
                         "explode": false,
@@ -23435,7 +23434,7 @@
                     {
                         "name": "cartItemId",
                         "in": "path",
-                        "description": "Optional: The reference id of the cart item you want to update (do not include if passing array of items in request body)",
+                        "description": "Optional: The reference id of the cart item you want to update (do not include if passing array of items in request body).",
                         "required": true,
                         "style": "simple",
                         "explode": false,
@@ -23447,7 +23446,7 @@
                     {
                         "name": "x-storefront",
                         "in": "header",
-                        "description": "The name of the storefront being used for the request.",
+                        "description": "The name of the storefront used for the request.",
                         "required": true,
                         "style": "simple",
                         "explode": false,
@@ -23471,7 +23470,7 @@
                     {
                         "name": "x-account",
                         "in": "header",
-                        "description": "The account value from header will be taken as default account if passed as query param",
+                        "description": "The account value from header is taken as default account if passed as query parameter.",
                         "required": false,
                         "style": "simple",
                         "explode": false,
@@ -23482,6 +23481,7 @@
                     }
                 ],
                 "requestBody": {
+                    "description": "Request body for updating fields of a bundle product, all the line items i.e, primary lineitem and option lineitems of the related bundle product needs to be part of the payload.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -23496,42 +23496,66 @@
                                     "ProductAttributes": {
                                         "type": "object"
                                     }
+                                }
+                            },
+                            "examples": {
+                                "example1": {
+                                    "summary": "Example 1 without product attributes",
+                                    "value": [
+                                        {
+                                            "LineItem": {
+                                                "attributes": {
+                                                    "type": "Apttus_Config2__LineItem__c"
+                                                },
+                                                "Id": "a13W0000003AQAHIA4",
+                                                "Apttus_Config2__LineNumber__c": "1.0",
+                                                "Apttus_Config2__PrimaryLineNumber__c": "1.0",
+                                                "Apttus_Config2__PricingStatus__c": "Pending",
+                                                "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
+                                                "Apttus_Config2__Quantity__C": 2
+                                            },
+                                            "ProductAttributes": null
+                                        },
+                                        {
+                                            "LineItem": {
+                                                "attributes": {
+                                                    "type": "Apttus_Config2__LineItem__c"
+                                                },
+                                                "Id": "a13W0000003AQAcIAO",
+                                                "Apttus_Config2__LineNumber__c": "1.0",
+                                                "Apttus_Config2__PrimaryLineNumber__c": "2.0",
+                                                "Apttus_Config2__PricingStatus__c": "Pending",
+                                                "Apttus_Config2__OptionId__c": "01t3I000000LwmBQAS",
+                                                "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
+                                                "Apttus_Config2__Quantity__C": 2
+                                            },
+                                            "ProductAttributes": null
+                                        }
+                                    ]
                                 },
-                                "example": [
-                                    {
-                                        "LineItem": {
-                                            "attributes": {
-                                                "type": "Apttus_Config2__LineItem__c"
+                                "example2": {
+                                    "summary": "Example 2 with product attributes",
+                                    "value": [
+                                        {
+                                            "LineItem": {
+                                                "attributes": {
+                                                    "type": "Apttus_Config2__LineItem__c"
+                                                },
+                                                "Id": "a13W0000003AQAHIA4",
+                                                "Apttus_Config2__LineNumber__c": "1.0",
+                                                "Apttus_Config2__PrimaryLineNumber__c": "1.0",
+                                                "Apttus_Config2__PricingStatus__c": "Pending",
+                                                "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
+                                                "Apttus_Config2__Quantity__C": 2
                                             },
-                                            "Id": "a13W0000003AQAHIA4",
-                                            "Apttus_Config2__LineNumber__c": "1.0",
-                                            "Apttus_Config2__PrimaryLineNumber__c": "1.0",
-                                            "Apttus_Config2__PricingStatus__c": "Pending",
-                                            "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
-                                            "Apttus_Config2__Quantity__C": 2
-                                        },
-                                        "ProductAttributes": {
-                                            "attributes": {}
+                                            "ProductAttributes": {
+                                                "Id": "a3Y8D000000PSDYUA4",
+                                                "Apttus_Config2__LineItemId__c": "a2u8D000000L1u9QAC",
+                                                "Apttus_Config2__Color__c": "Black"
+                                            }
                                         }
-                                    },
-                                    {
-                                        "LineItem": {
-                                            "attributes": {
-                                                "type": "Apttus_Config2__LineItem__c"
-                                            },
-                                            "Id": "a13W0000003AQAcIAO",
-                                            "Apttus_Config2__LineNumber__c": "1.0",
-                                            "Apttus_Config2__PrimaryLineNumber__c": "2.0",
-                                            "Apttus_Config2__PricingStatus__c": "Pending",
-                                            "Apttus_Config2__OptionId__c": "01t3I000000LwmBQAS",
-                                            "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
-                                            "Apttus_Config2__Quantity__C": 2
-                                        },
-                                        "ProductAttributes": {
-                                            "attributes": {}
-                                        }
-                                    }
-                                ]
+                                    ]
+                                }
                             }
                         }
                     }
