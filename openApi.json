@@ -18123,7 +18123,7 @@
                     "Cart Items"
                 ],
                 "summary": "Add Product to Cart",
-                "description": "The cart items post endpoint can be used to add new line items to an existing cart. This is the most common type of cart action.\nA successful post will return the rules and line items associated with the added product.\n\nMultiple line items may be returned if the product added is associated with a bundle.\n\nPricing for the added product is calculated as an asynchronous process after the product is added and may not be immediatley available on the line item. While pricing is being calculated, the 'IsPricePending' field on the cart will be 'true'.",
+                "description": "The cart items post endpoint can be used to add new line items to an existing cart. This is the most common type of cart action.\nA successful post will return the rules and line items associated with the added product.\n\nMultiple line items may be returned if the product added is associated with a bundle.\n\nPricing for the added product is calculated as an asynchronous process after the product is added and may not be immediatley available on the line item. While pricing is being calculated, the 'IsPricePending' field on the cart will be 'true'.\n\n<i><b>Note:</b> You must pass unique products in the payload. If the same product needs to be added more than once, this API can be called multiple times.</i>",
                 "operationId": "AddProducttoCart",
                 "parameters": [
                     {
